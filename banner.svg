@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-labelledby="t">
+  <title id="t">Maximiliano Ide — Software Engineer</title>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#1b4bc4"/>
+      <stop offset="0.45" stop-color="#0e2872"/>
+      <stop offset="1" stop-color="#050c22"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0.7" cy="0" r="0.8">
+      <stop offset="0" stop-color="#3fd0ff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#3fd0ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wedge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.55" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d2f6ff"/>
+    </linearGradient>
+    <clipPath id="slash">
+      <polygon points="0,205 1200,20 1200,95 0,265"/>
+    </clipPath>
+    <style>
+      .name  { font: italic 900 118px Anton, Impact, "Arial Narrow Bold", "Arial Narrow", sans-serif; text-transform: uppercase; }
+      .role  { font: 800 26px "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; letter-spacing: 7px; }
+      .echo  { font: italic 900 250px Anton, Impact, "Arial Narrow Bold", sans-serif; }
+      .rays  { animation: drift 18s linear infinite; }
+      .b     { animation: rise linear infinite; }
+      .pulse { animation: pulse 1.4s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: 20% 80%; }
+      @keyframes drift { to { transform: translateX(120px); } }
+      @keyframes rise  { from { transform: translateY(0); opacity: 0; } 15% { opacity: .8; } to { transform: translateY(-360px); opacity: 0; } }
+      @keyframes pulse { to { transform: scale(1.06, 1.1); } }
+      @media (prefers-reduced-motion: reduce) { .rays, .b, .pulse { animation: none; } }
+    </style>
+  </defs>
+
+  <!-- water -->
+  <rect width="1200" height="320" fill="url(#sea)"/>
+  <rect width="1200" height="320" fill="url(#light)"/>
+  <g class="rays" opacity="0.08" fill="#9fe6ff">
+    <polygon points="-120,0 -80,0 -240,320 -280,320"/>
+    <polygon points="40,0 70,0 -90,320 -120,320"/>
+    <polygon points="200,0 244,0 84,320 40,320"/>
+    <polygon points="360,0 390,0 230,320 200,320"/>
+    <polygon points="520,0 566,0 406,320 360,320"/>
+    <polygon points="680,0 710,0 550,320 520,320"/>
+    <polygon points="840,0 884,0 724,320 680,320"/>
+    <polygon points="1000,0 1030,0 870,320 840,320"/>
+    <polygon points="1160,0 1204,0 1044,320 1000,320"/>
+    <polygon points="1320,0 1350,0 1190,320 1160,320"/>
+  </g>
+
+  <!-- giant outlined echo -->
+  <text class="echo" x="1230" y="300" text-anchor="end" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2" transform="rotate(-8 1200 300)">IDE</text>
+
+  <!-- bubbles -->
+  <g fill="none" stroke="#bfeeff" stroke-opacity="0.55">
+    <circle class="b" cx="90"   cy="350" r="9"  style="animation-duration:9s;  animation-delay:-2s"/>
+    <circle class="b" cx="310"  cy="350" r="5"  style="animation-duration:7s;  animation-delay:-5s"/>
+    <circle class="b" cx="640"  cy="350" r="12" style="animation-duration:11s; animation-delay:-1s"/>
+    <circle class="b" cx="880"  cy="350" r="6"  style="animation-duration:8s;  animation-delay:-6s"/>
+    <circle class="b" cx="1040" cy="350" r="10" style="animation-duration:10s; animation-delay:-3s"/>
+    <circle class="b" cx="1150" cy="350" r="4"  style="animation-duration:6s;  animation-delay:-4s"/>
+  </g>
+
+  <!-- cursor: red triangle + white wedge, tilted like the site's menu -->
+  <g transform="translate(600 150) scale(0.84) rotate(-6) translate(-600 -175)">
+    <polygon class="pulse" points="560,250 1010,40 930,250" fill="#ff2d55"/>
+    <polygon points="70,150 960,70 930,215 100,245" fill="url(#wedge)"/>
+
+    <!-- name: black with white outline, red inside the slash -->
+    <text class="name" x="110" y="222" textLength="800" lengthAdjust="spacingAndGlyphs"
+          fill="#06081a" stroke="#ffffff" stroke-width="6" paint-order="stroke">MAXIMILIANO IDE</text>
+    <text class="name" x="110" y="222" textLength="800" lengthAdjust="spacingAndGlyphs"
+          fill="#ff2d55" clip-path="url(#slash)">MAXIMILIANO IDE</text>
+
+    <!-- role tag -->
+    <polygon points="126,262 560,262 548,300 114,300" fill="#3fd0ff"/>
+    <text class="role" x="140" y="291" fill="#0a1a3f" textLength="400" lengthAdjust="spacingAndGlyphs">SOFTWARE ENGINEER</text>
+  </g>
+</svg>
