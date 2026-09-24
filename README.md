@@ -1,8 +1,5 @@
-<p align="center">
-  <a href="https://maximilianoide.github.io/">
-    <img src="banner.svg" alt="Maximiliano Ide — Software Engineer" width="100%">
-  </a>
-</p>
+<h1 align="center">Maximiliano Ide</h1>
+<p align="center"><b>Software Engineer</b> · Valdivia, Chile</p>
 
 <p align="center">
   <a href="https://maximilianoide.github.io/"><img src="https://img.shields.io/badge/Website-maximilianoide.github.io-3fd0ff?style=for-the-badge&labelColor=0a1a3f" alt="Website"></a>
@@ -85,5 +82,3 @@ Spanish (native) · English (C2, EF SET Proficient) · Portuguese (competent)
 ### 🎮 Off duty
 
 🍺 Beer · 🎸 🎹 Playing guitar and piano · 🎮 Former high-ranked LoL and Valorant player · 🥊 Combat sports
-
-<p align="center"><sub>🎓 Universidad Austral de Chile — B.S. in Computer Science (incomplete studies), 2018 – 2022</sub></p>
